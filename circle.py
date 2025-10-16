@@ -1,17 +1,16 @@
-# circle.py
-
 import math
+import sys
 
 def compute_area(radius: float) -> float:
-    
     if radius < 0:
         raise ValueError("Radius cannot be negative.")
     return math.pi * radius ** 2
 
 def main():
-    
     try:
-        radius = float(input("Enter the radius of the circle: "))
+        print("Enter the radius of the circle: ", end='')
+        sys.stdout.flush()
+        radius = float(input())
         if radius < 0:
             print("Radius cannot be negative.")
             return
@@ -22,4 +21,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
